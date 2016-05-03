@@ -18,6 +18,7 @@ with open('log.log', 'a') as file:
       count_no_drop += 1
       harmonic += 1 / integer_increment
     if integer_increment % 8888888 == 0:
+      print('H: {0:40f}  D: {1:40d}  ND: {2:40d}\n'.format(harmonic, count_drop, count_no_drop))
       file.write('H: {0:40f}  D: {1:40d}  ND: {2:40d}\n'.format(harmonic, count_drop, count_no_drop))
 
 
