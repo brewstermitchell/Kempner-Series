@@ -7,6 +7,7 @@ integer_increment = 0
 harmonic = 0
 count_no_drop = 0
 count_drop = 0
+x = 2
 
 
 while harmonic < 80:
@@ -17,8 +18,11 @@ while harmonic < 80:
   else:
     count_no_drop += 1
     harmonic += 1 / integer_increment
+  if integer_increment % 8888888 == 0:
+    print('H:', harmonic, 'D:', count_drop, 'ND:', count_no_drop)
+  
 
-print('Final sum: %s', str(harmonic))
-print('Number of terms dropped: %s', str(count_drop))
-print('Number of terms not dropped: %s', str(count_no_drop))
+print('Final sum: ', harmonic)
+print('Number of terms dropped: ', count_drop)
+print('Number of terms not dropped: ', count_no_drop)
 exit(0)
